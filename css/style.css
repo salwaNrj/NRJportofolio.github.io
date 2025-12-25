@@ -16,12 +16,13 @@ body {
 nav {
   display: flex;
   justify-content: space-around;
-  padding: 20px 0;
+  padding: 20px;
   color: black;
-  margin: 1.5rem 5%;
+  margin: 0 5%;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 40px;
+  z-index: 10;
 }
 
 nav h2 {
@@ -114,7 +115,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   padding-top: 10px;
   /* border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px; */
@@ -127,7 +128,7 @@ header {
   width: 75%;
 
   height: auto;
-  margin: 6% auto;
+  margin: 4% auto;
   background-color: #daf561;
   border-radius: 30px;
   box-sizing: border-box;
@@ -135,7 +136,8 @@ header {
 
 .kiri {
   flex: 3;
-  margin: 0 5%;
+  margin: auto;
+  padding: 15px;
 }
 .kiri p {
   padding: 30px;
@@ -170,22 +172,20 @@ header {
   padding: 35px;
 }
 
-.container1 button {
-  margin: 20px;
-  padding: 20px;
+.btn-contact {
+  display: inline-block;
+  padding: 10px 20px;
   background-color: #254783;
   border-radius: 20px;
   color: white;
-  margin-left: 40px;
+  text-decoration: none;
   transition: transform 0.2s ease;
   border: 2px solid #254783;
+  margin-left: 10px;
 }
-.container1 button:hover {
+
+.btn-contact:hover {
   transform: scale(1.1);
-}
-button a {
-  text-decoration: none;
-  color: white;
 }
 
 /* -------------------------------------------- */
@@ -197,10 +197,11 @@ button a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
+  /* border-top-left-radius: 60px;
+  border-top-right-radius: 60px; */
   box-sizing: border-box;
   /* margin: 10%; */
+  /* margin-top: 30px; */
   background-color: #254783;
   height: 100vh;
 }
@@ -210,7 +211,6 @@ button a {
   border-radius: 50px;
   padding: 35px;
   filter: blur(5px);
-  /* cursor: pointer; */
   transition: all 0.2s;
   margin-left: 5px;
 }
@@ -231,13 +231,13 @@ button a {
   margin: 5% 5%;
 }
 .kiri2 h1 {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
+  margin-top: -30px;
   text-align: center;
 }
 .kiri2 p {
   text-align: justify;
-  margin-top: 3%;
-  font-size: 25px;
+  font-size: 24px;
 }
 /* -------------------------------------------- */
 
@@ -275,21 +275,16 @@ button a {
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: flex;
-    /* margin: auto; */
-
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  nav {
-    padding-bottom: 40px;
-
-    /* position: relative;
-    z-index: 100; */
-  }
   nav h2 {
     display: none;
+  }
+  nav {
+    height: 20px;
   }
   nav ul {
     position: absolute;
@@ -298,20 +293,21 @@ button a {
     right: 0;
     top: 0;
     width: 100%;
-    height: 48vh;
+    height: 49vh;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    z-index: -1;
     background-color: rgb(255, 255, 255);
-    /* backdrop-filter: blur(50px); */
-    transform: translateY(0);
-    transition: all 1s;
-    opacity: 1;
+
+    /* 🔧 PERBAIKAN */
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
   }
 
   nav ul.slide {
-    opacity: 0;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   header {
@@ -321,11 +317,7 @@ button a {
   /* -------------------------------------------- */
   .container1 {
     width: 90%;
-    height: 50vh;
-  }
-
-  .kiri {
-    margin-left: 1%;
+    height: auto;
   }
 
   .kiri p,
@@ -340,10 +332,11 @@ button a {
     height: 55vh;
   }
   .kiri2 h1 {
-    font-size: 45px;
+    font-size: 25px;
+    padding-top: 3rem;
   }
   .kiri2 p {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .kanan img {
