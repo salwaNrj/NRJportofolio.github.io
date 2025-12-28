@@ -516,7 +516,7 @@ header {
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
   nav {
     padding: 15px;
     width: 95%;
