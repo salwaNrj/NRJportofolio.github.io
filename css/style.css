@@ -4,31 +4,41 @@
 }
 
 body {
-  overflow-x: hidden;
   background-image: url("../img/c3.jpg");
-  height: 100vh;
+  height: auto;
 }
 
-body h1 {
+body h1,
+p {
   font-size: 35px;
   font-family: "Press Start 2P", system-ui;
+  animation: muncul both;
+  animation-timeline: view(50% auto);
 }
 body p,
 span {
   font-family: "Comic Relief", system-ui;
 }
-
+body img {
+  animation: muncul2 both;
+  animation-timeline: view(50% auto);
+}
 /* -------------------------------------------- */
 
 /* N A V  */
 
 nav {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 90%;
   font-family: "Press Start 2P", system-ui;
   display: flex;
   justify-content: space-around;
   padding: 20px;
   color: black;
-  margin: 0 5%;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 40px;
@@ -126,9 +136,7 @@ header {
   background-size: cover;
   width: 100%;
   height: 98vh;
-  padding-top: 10px;
-  /* border-bottom-right-radius: 40px;
-  border-bottom-left-radius: 40px; */
+  padding-top: 100px;
 }
 
 .container1 {
@@ -215,19 +223,19 @@ header {
   /* margin: 10%; */
   /* margin-top: 30px; */
   background-color: #254783;
-  height: 100vh;
+  height: 105vh;
 }
 
 .kanan2 img {
   height: 55vh;
   border-radius: 50px;
   padding: 35px;
-  filter: blur(5px);
+  /* filter: blur(5px); */
   transition: all 0.2s;
   margin-left: 5px;
 }
 .kanan2 img:hover {
-  filter: blur(0);
+  /* filter: blur(0); */
   transform: scale(1.1);
 }
 
@@ -252,8 +260,15 @@ header {
   font-size: 23px;
 }
 /* -------------------------------------------- */
+
+/* EDUCATIONS */
+
+.eduu {
+  background-image: url(/img/c3.jpg);
+  background-size: cover;
+}
 .educations {
-  height: 80vh;
+  height: 115vh;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -267,7 +282,8 @@ header {
 
 .edu {
   text-align: center;
-  margin-top: 50px;
+  padding-top: 6rem;
+  /* margin-top: 50px; */
 }
 .educations img {
   margin-top: -255px;
@@ -287,24 +303,21 @@ header {
 
 .container3 {
   background-color: #daf561;
+  border-radius: 50px;
   height: 100vh;
-  width: 100%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  /* border-radius: 50px; */
-  margin: 0 auto;
+  margin: 8% auto;
   margin-top: -365px;
-  /* border-radius: 50px; */
-  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35); */
 }
 
 .container3 img {
   width: 30%;
   margin: 5% auto;
-  /* display: block; */
 }
 
 .container3 h1 {
@@ -313,34 +326,52 @@ header {
 /* -------------------------------------------- */
 
 .container4 {
-  /* max-width: 1000px; */
   margin: 0 auto;
   background-color: #254783;
   width: 100%;
-  height: 110vh;
+  height: 115vh;
 }
 .container4 h1 {
   text-align: center;
   color: white;
-  padding-top: 35px;
+  padding-top: 100px;
+  padding-bottom: 2%;
 }
 .content {
   display: flex;
   flex-wrap: wrap;
   margin-left: 105px;
-  /* gap: 2rem; */
-  /* margin: 5px auto; */
 }
 
-.thumbnail {
+.prjk {
   width: 45%;
   margin: 35px auto;
   justify-content: space-between;
 }
 
-.thumbnail img {
+.prjk img {
   width: 80%;
   border-radius: 20px;
+}
+
+/* -------------------------------------------- */
+
+.container5 {
+  background-color: white;
+  justify-content: space-evenly;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  padding: 0 15%;
+}
+
+.container5 a {
+  text-decoration: none;
+  color: black;
+}
+.container5 h1 {
+  animation: none;
+  font-size: 15px;
 }
 
 /* MOBILE */
@@ -408,7 +439,7 @@ header {
   }
   /* -------------------------------------------- */
   .kotak {
-    height: 55vh;
+    height: 58vh;
   }
   .kiri2 h1 {
     font-size: 25px;
@@ -430,9 +461,9 @@ header {
   }
   /* -------------------------------------------- */
   .container3 {
-    height: 70vh;
+    height: 100vh;
     width: 90%;
-    margin: -320px auto;
+    margin: -375px auto;
     border-radius: 50px;
   }
   .container3 h1 {
@@ -444,7 +475,112 @@ header {
     margin-top: -35px;
   }
   /* -------------------------------------------- */
+
   .container4 {
-    margin-top: 27rem;
+    /* max-width: 1000px; */
+    margin-top: 65%;
+    background-color: #254783;
+    width: 100%;
+    height: auto;
+  }
+  .container4 h1 {
+    text-align: center;
+    color: white;
+    padding-top: 12%;
+    padding-bottom: 5%;
+  }
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /* gap: 2rem; */
+    /* margin: 5px auto; */
+  }
+
+  .prjk {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .prjk img {
+    width: 80%;
+    border-radius: 20px;
+  }
+  /* -------------------------------------------- */
+
+  .container5 h1 {
+    font-size: 20px;
+  }
+  .footer-content img {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    padding: 15px;
+    width: 95%;
+  }
+
+  nav ul {
+    height: 60vh;
+  }
+
+  .kiri h1 {
+    font-size: 18px;
+  }
+  .kiri p {
+    font-size: 15px;
+  }
+  .kiri span,
+  .btn-contact {
+    font-size: 14px;
+  }
+  /* --------------------------------- */
+  .container2 {
+    flex-direction: column;
+    height: 130vh;
+  }
+  .kotak {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .kiri2 p {
+    font-size: 10px;
+  }
+
+  /* --------------------------------- */
+  .container3 {
+    margin-top: -370px;
+  }
+  .container4 {
+    margin-top: 85%;
+  }
+}
+/* KEYFRAMES */
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes muncul2 {
+  from {
+    filter: saturate(0) contrast(4) brightness(0.1) blur(5px);
+    opacity: 0;
+    scale: 1;
+    translate: 0 3rem;
+  }
+  to {
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
   }
 }
